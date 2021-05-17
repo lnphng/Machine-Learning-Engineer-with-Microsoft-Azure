@@ -14,7 +14,6 @@ data_link = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sampl
 
 ds = TabularDatasetFactory.from_delimited_files(path=data_link)
 
-
 def clean_data(data):
     # Dict for cleaning data
     months = {"jan":1, "feb":2, "mar":3, "apr":4, "may":5, "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12}
@@ -48,7 +47,6 @@ x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
-### YOUR CODE HERE ###
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3)
 
 run = Run.get_context()
